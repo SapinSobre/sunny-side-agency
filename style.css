@@ -11,46 +11,48 @@ body {
   width: 375px;
 }
 body .main {
-  width: 100%;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-areas: "headersun" "articlesun" "asidesun" "testimonialssun" "footersun";
 }
 body .main .header {
   grid-area: headersun;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 1075px;
   background-image: url("./images/mobile/image-header.jpg");
   display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "textsun menusun";
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  grid-template-areas: "navsun" "slogansun";
 }
-body .main .header .nav {
-  grid-area: menusun;
-}
-body .main .header .nav .nav_menu {
+body .main .header .header_nav {
+  grid-area: navsun;
   display: grid;
   grid-template-areas: "logo toggle";
 }
-body .main .header .nav .nav_menu .nav_logo {
+body .main .header .header_nav .header_nav_logo {
   grid-area: logo;
   color: white;
 }
-body .main .header .nav .nav_menu .nav_toggle {
+body .main .header .header_nav .header_nav_toggle {
   display: grid;
   grid-template-areas: "listsun checksun";
   grid-area: toggle;
   color: white;
 }
-body .main .header .nav .nav_menu .nav_toggle .nav_check {
+body .main .header .header_nav .header_nav_toggle .header_nav_toggle_check {
   grid-area: checksun;
   z-index: 10;
   opacity: 0.5;
   cursor: pointer;
 }
-body .main .header .nav .nav_menu .nav_toggle .nav_check:checked + .nav_list {
+body .main .header .header_nav .header_nav_toggle .header_nav_toggle_check:checked + .nav_list {
   display: grid;
 }
-body .main .header .nav .nav_menu .nav_toggle .nav_list {
+body .main .header .header_nav .header_nav_toggle .header_nav_toggle_list {
   display: none;
   list-style-type: none;
   text-decoration: none;
@@ -61,46 +63,49 @@ body .main .header .nav .nav_menu .nav_toggle .nav_list {
   text-decoration: none;
   grid-area: listsun;
 }
-body .main .header .nav .nav_menu .nav_toggle .nav_list .nav_link {
+body .main .header .header_nav .header_nav_toggle .header_nav_toggle_list .header_nav_toggle_list_link {
   text-transform: capitalize;
   padding: 16px;
 }
-body .main .header .nav .nav_text {
+body .main .header .header_text {
+  grid-area: slogansun;
   font-family: Fraunces, Garamond, Serif;
   display: grid;
-  text-align: center;
-  grid-area: textsun;
   grid-template-areas: "slogan" "arrow";
 }
-body .main .header .nav .nav_text .nav_slogan {
+body .main .header .header_text .header_text_slogan {
+  grid-area: slogan;
   stroke: 1px solid red;
   text-transform: uppercase;
-  font-size: 2.5em;
-  grid-area: slogan;
+  font-size: 4em;
   color: white;
+  text-align: center;
 }
-body .main .header .nav .nav_text .nav_arrow {
+body .main .header .header_text .header_text_arrow {
   grid-area: arrow;
+  position: absolute;
+  left: 50%;
   color: white;
+  width: 50%;
 }
-body .article {
+body .main .article {
   grid-area: articlesun;
   text-align: center;
   color: #212a3b;
   font-family: Fraunces, Garmond, Serif;
 }
-body .article .article_section_content {
+body .main .article .article_section_content {
   padding: 20px;
   background-color: #fffbfb;
 }
-body .article .article_section_content .article_section_content_title {
+body .main .article .article_section_content .article_section_content_title {
   font-size: 1.8em;
   font-weight: bold;
 }
-body .article .article_section_content .article_section_content_text {
+body .main .article .article_section_content .article_section_content_text {
   color: #838093;
 }
-body .article .article_section_content .article_section_content_link {
+body .main .article .article_section_content .article_section_content_link {
   font-weight: bold;
   text-transform: uppercase;
   color: #363434;
@@ -111,53 +116,53 @@ body .article .article_section_content .article_section_content_link {
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
 }
-body .aside {
+body .main .aside {
   grid-area: asidesun;
   text-align: center;
   font-family: Fraunces, Garamond, Serif;
   color: #19536b;
 }
-body .aside .aside_section:nth-child(1) {
+body .main .aside .aside_section:nth-child(1) {
   background-image: url("./images/mobile/image-graphic-design.jpg");
 }
-body .aside .aside_section:nth-child(2) {
+body .main .aside .aside_section:nth-child(2) {
   background-image: url("./images/mobile/image-photography.jpg");
 }
-body .asideTestimonials {
+body .main .asideTestimonials {
   grid-area: testimonialssun;
   text-align: center;
   background-color: pink;
   height: auto;
 }
-body .asideTestimonials .asideTestimonials_section .asideTestimonials_section_image {
+body .main .asideTestimonials .asideTestimonials_section .asideTestimonials_section_image {
   border-radius: 50%;
 }
-body .footer {
+body .main .footer {
   grid-area: footersun;
   background-color: #458c7e;
 }
-body .footer .footer_images {
+body .main .footer .footer_images {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "milk oranges" "cone sugar";
 }
-body .footer .footer_images #milk {
+body .main .footer .footer_images #milk {
   grid-area: milk;
 }
-body .footer .footer_images #oranges {
+body .main .footer .footer_images #oranges {
   grid-area: oranges;
 }
-body .footer .footer_images #cone {
+body .main .footer .footer_images #cone {
   grid-area: cone;
 }
-body .footer .footer_images #sugar {
+body .main .footer .footer_images #sugar {
   grid-area: sugar;
 }
-body .footer .footer_copyright {
+body .main .footer .footer_copyright {
   text-align: center;
 }
-body .footer .footer_copyright .footer_copyright_menu .footer_copyright_menu_link {
+body .main .footer .footer_copyright .footer_copyright_menu .footer_copyright_menu_link {
   text-decoration: none;
   color: lightgreen;
 }

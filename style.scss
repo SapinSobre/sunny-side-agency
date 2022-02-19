@@ -24,56 +24,87 @@ body{
             height: 1075px;                     
             background-image: url('./images/mobile/image-header.jpg');                    
             display: grid;
-            grid-template-rows: 20% 80%;
-            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+            grid-template-columns: 50% 50%;
             grid-template-areas:                    
-            'navsun'
-            'slogansun';
+            'logosun navsun'
+            'slogansun slogansun';
+            .header_logo{ 
+                grid-area: logosun;   
+                width: 200px;         
+                color: white;                                           
+            }   
             .header_nav{  
-                grid-area: navsun;                  
-                display: grid;                    
+                grid-area: navsun; 
+                display: grid;
+                grid-template-rows: 20% 80%;
+                grid-template-columns: 50% 50%;
                 grid-template-areas: 
-                    'logo toggle';                    
-                .header_nav_logo{ 
-                    grid-area: logo;            
-                    color: white;                           
-                }                 
-                .header_nav_toggle{
-                    display: grid;
-                    grid-template-areas: 
-                        'listsun checksun';
-                    grid-area: toggle;
-                    color: white;
-                    .header_nav_toggle_check{
-                        grid-area: checksun;
-                        z-index: 10;
-                        opacity: 0.5;
-                        cursor: pointer;
-                        &:checked + .nav_list{                              
-                        display:grid;                                                
+                    'hamburgerIcon inputCheck'
+                    'navList navList';             
+                .header_nav_hamburgerIcon{
+                    grid-area: hamburgerIcon;
+                    padding: 20px; 
+                    width: 100px;
+                    height: 100px;
+                    margin-left: 120%;                                   
+                    background-color: hsl(200, 100%, 62%);
+                    color: hsl(196, 100%, 73%);  
+                }
+                .header_nav_check{
+                    grid-area: inputCheck;
+                    width: 125px;
+                    height: 125px; 
+                    margin-left: 30%;                   
+                    opacity: 0;
+                    &:checked + .header_nav_list{
+                        display: grid;
+                    }
+                }
+                .header_nav_list{
+                    grid-area: navList;
+                    display: none;
+                    margin-left: 0;
+                    grid-template-rows: 25% 25% 25% 25%;
+                    grid-template-columns: 100%;
+                    grid-template-areas:
+                        'about'
+                        'services' 
+                        'projects'
+                        'contact';
+                              
+                    background-color: white;
+                    opacity: 0.5;
+                    color: hsl(210, 4%, 67%);  
+                    .header_nav_list_link{
+                        font-size: 2.5em;
+                        list-style-type: none;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        .header_nav_list_link_a{
+                            text-decoration: none;
+                            &:nth-child(1){
+                                grid-area: 'about';
+                            }
+                            &:nth-child(2){
+                                grid-area: 'services';
+                            }
+                            &:nth-child(3){
+                                grid-area: 'projects';
+                            }
+                            &:nth-child(4){
+                                grid-area: 'contact';
+                            }
                         }
                     }
-                    .header_nav_toggle_list{
-                        display: none;
-                        list-style-type: none;
-                        text-decoration:none;                        
-                        margin: 0;
-                        padding: 16px;                     
-                        color: $grayish_blue;
-                        font-size: 1em;
-                        text-decoration: none;  
-                        grid-area: listsun;     
-                        .header_nav_toggle_list_link{  
-                            text-transform: capitalize;       
-                            padding: 16px;                                
-                        }
-                    }                
                 }
-            }                
+            }             
             .header_text{
                 grid-area: slogansun;
                 font-family: Fraunces, Garamond, Serif;
-                display: grid;                       
+                display: grid; 
+                grid-template-rows: 20% 80%;
+                grid-template-columns: 100%;                      
                 grid-template-areas: 
                     'slogan'
                     'arrow';
@@ -90,7 +121,7 @@ body{
                     position: absolute;
                     left: 50%;                   
                     color: white; 
-                    width: 50%;                           
+                                            
                 }            
             }            
         }

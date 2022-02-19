@@ -43,8 +43,7 @@ body{
                 grid-template-columns: 50% 50%;
                 grid-template-areas: 
                     'hamburgerIcon inputCheck'
-                    'navList navList'
-                    'navText navText';             
+                    'navList navList';                        
                 .header_nav_hamburgerIcon{
                     grid-area: hamburgerIcon;
                     padding: 20px; 
@@ -64,15 +63,15 @@ body{
                     opacity: 0;
                     &:checked + .header_nav_list{
                         display: grid;
+                        grid-area: navList;
                     }
                     &:checked + .header_nav_list + .header_nav_text{
                         display: none;
                     }
                 }
                 .header_nav_list{
-                    grid-area: navList;
-                    display: none;
-                    margin-left: 0;
+                    display: none;                   
+                    margin: -130px 10% 20% 10%;
                     grid-template-rows: 25% 25% 25% 25%;
                     grid-template-columns: 100%;
                     grid-template-areas:
@@ -87,8 +86,7 @@ body{
                     text-align: center;
                     .header_nav_list_link{
                         font-size: 2.5em;
-                        list-style-type: none;
-                        
+                        list-style-type: none;                        
                         text-transform: capitalize; 
                         &:nth-child(1){
                             grid-area: 'about'; 
@@ -126,14 +124,15 @@ body{
                     }
                 }
                 .header_nav_text{
-                    grid-area: navText;
-                    font-family: Fraunces, Garamond, Serif;
+                    grid-area: navList;
+                    font-family: Fraunces, Garamond, Serif;                    
                     display: grid; 
-                    grid-template-rows: 20% 80%;
+                    grid-template-rows: 30% 70%;
                     grid-template-columns: 100%;                      
                     grid-template-areas: 
-                    'slogan'
-                    'arrow';
+                        'slogan'
+                        'arrow';
+                    margin-top: -150px;
                     .header_nav_text_slogan{
                         grid-area: slogan;
                         stroke: 1px solid red;
@@ -143,9 +142,11 @@ body{
                         text-align: center;  
                     }
                     .header_nav_text_arrow{
-                        grid-area: arrow;      
-                        position: absolute;
-                        left: 50%;                   
+                        grid-area: arrow;                       
+                        width: 20%;
+                        height: auto;
+                        padding-left: 40%; 
+                        padding-top: 10%;                  
                         color: white; 
                     }
                 }                

@@ -40,7 +40,7 @@ body .main .header .header_nav {
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "hamburgerIcon inputCheck" "navList navList" "navText navText";
+  grid-template-areas: "hamburgerIcon inputCheck" "navList navList";
 }
 body .main .header .header_nav .header_nav_hamburgerIcon {
   grid-area: hamburgerIcon;
@@ -62,14 +62,14 @@ body .main .header .header_nav .header_nav_check {
 }
 body .main .header .header_nav .header_nav_check:checked + .header_nav_list {
   display: grid;
+  grid-area: navList;
 }
 body .main .header .header_nav .header_nav_check:checked + .header_nav_list + .header_nav_text {
   display: none;
 }
 body .main .header .header_nav .header_nav_list {
-  grid-area: navList;
   display: none;
-  margin-left: 0;
+  margin: -130px 10% 20% 10%;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 100%;
   grid-template-areas: "about" "services" "projects" "contact";
@@ -112,12 +112,13 @@ body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(
   text-transform: uppercase;
 }
 body .main .header .header_nav .header_nav_text {
-  grid-area: navText;
+  grid-area: navList;
   font-family: Fraunces, Garamond, Serif;
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 30% 70%;
   grid-template-columns: 100%;
   grid-template-areas: "slogan" "arrow";
+  margin-top: -150px;
 }
 body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
   grid-area: slogan;
@@ -129,8 +130,10 @@ body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
 }
 body .main .header .header_nav .header_nav_text .header_nav_text_arrow {
   grid-area: arrow;
-  position: absolute;
-  left: 50%;
+  width: 20%;
+  height: auto;
+  padding-left: 40%;
+  padding-top: 10%;
   color: white;
 }
 body .main .article {

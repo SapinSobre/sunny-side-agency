@@ -24,53 +24,79 @@ body .main .header {
   height: 1075px;
   background-image: url("./images/mobile/image-header.jpg");
   display: grid;
-  grid-template-rows: 20% 80%;
-  grid-template-columns: 100%;
-  grid-template-areas: "navsun" "slogansun";
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "logosun navsun" "slogansun slogansun";
+}
+body .main .header .header_logo {
+  grid-area: logosun;
+  width: 200px;
+  color: white;
 }
 body .main .header .header_nav {
   grid-area: navsun;
   display: grid;
-  grid-template-areas: "logo toggle";
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "hamburgerIcon inputCheck" "navList navList";
 }
-body .main .header .header_nav .header_nav_logo {
-  grid-area: logo;
-  color: white;
+body .main .header .header_nav .header_nav_hamburgerIcon {
+  grid-area: hamburgerIcon;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  margin-left: 120%;
+  background-color: #3dbeff;
+  color: #75daff;
 }
-body .main .header .header_nav .header_nav_toggle {
+body .main .header .header_nav .header_nav_check {
+  grid-area: inputCheck;
+  width: 125px;
+  height: 125px;
+  margin-left: 30%;
+  opacity: 0;
+}
+body .main .header .header_nav .header_nav_check:checked + .header_nav_list {
   display: grid;
-  grid-template-areas: "listsun checksun";
-  grid-area: toggle;
-  color: white;
 }
-body .main .header .header_nav .header_nav_toggle .header_nav_toggle_check {
-  grid-area: checksun;
-  z-index: 10;
-  opacity: 0.5;
-  cursor: pointer;
-}
-body .main .header .header_nav .header_nav_toggle .header_nav_toggle_check:checked + .nav_list {
-  display: grid;
-}
-body .main .header .header_nav .header_nav_toggle .header_nav_toggle_list {
+body .main .header .header_nav .header_nav_list {
+  grid-area: navList;
   display: none;
+  margin-left: 0;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 100%;
+  grid-template-areas: "about" "services" "projects" "contact";
+  background-color: white;
+  opacity: 0.5;
+  color: #a7abae;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link {
+  font-size: 2.5em;
   list-style-type: none;
   text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  color: #a7abae;
-  font-size: 1em;
-  text-decoration: none;
-  grid-area: listsun;
+  text-transform: uppercase;
 }
-body .main .header .header_nav .header_nav_toggle .header_nav_toggle_list .header_nav_toggle_list_link {
-  text-transform: capitalize;
-  padding: 16px;
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a {
+  text-decoration: none;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(1) {
+  grid-area: "about";
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(2) {
+  grid-area: "services";
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(3) {
+  grid-area: "projects";
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(4) {
+  grid-area: "contact";
 }
 body .main .header .header_text {
   grid-area: slogansun;
   font-family: Fraunces, Garamond, Serif;
   display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
   grid-template-areas: "slogan" "arrow";
 }
 body .main .header .header_text .header_text_slogan {
@@ -86,7 +112,6 @@ body .main .header .header_text .header_text_arrow {
   position: absolute;
   left: 50%;
   color: white;
-  width: 50%;
 }
 body .main .article {
   grid-area: articlesun;

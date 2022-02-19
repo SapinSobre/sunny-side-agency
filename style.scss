@@ -32,9 +32,9 @@ body{
             .header_logo{ 
                 grid-area: logo;  
                 position: relative; 
-                width: 40%; 
-                padding: 60px 0 0 6%;    
-                color: white;                                           
+                width: 30%; 
+                padding: 60px 0 0 7%;    
+                color: #fffbfb;                                           
             }   
             .header_nav{  
                 grid-area: navbar; 
@@ -49,7 +49,7 @@ body{
                     padding: 20px; 
                     width: 50px;
                     height: auto;
-                    margin-left: 160%; 
+                    margin-left: 168%; 
                     margin-top: -17%;                                  
                     background-color: hsl(200, 100%, 62%);
                     color: hsl(196, 100%, 73%);  
@@ -58,7 +58,7 @@ body{
                     grid-area: inputCheck;
                     width: 100px;
                     height: 100px; 
-                    margin-left: 55%;    
+                    margin-left: 60%;    
                     margin-top: -13%;               
                     opacity: 0;
                     &:checked + .header_nav_list{
@@ -71,7 +71,7 @@ body{
                 }
                 .header_nav_list{
                     display: none;                   
-                    margin: -130px 10% 20% 10%;
+                    margin: -70px 6% 30% 6%;
                     grid-template-rows: 25% 25% 25% 25%;
                     grid-template-columns: 100%;
                     grid-template-areas:
@@ -79,9 +79,9 @@ body{
                         'services' 
                         'projects'
                         'contact';                           
-                    background-color: white;
-                    opacity: 0.5;
-                    color: hsl(210, 4%, 67%);  
+                    background-color: #fffbfb;
+                    opacity: 1;
+                    color: $very_dark_grayish_blue;  
                     text-transform: capitalize;
                     text-align: center;
                     .header_nav_list_link{
@@ -132,7 +132,7 @@ body{
                     grid-template-areas: 
                         'slogan'
                         'arrow';
-                    margin-top: -150px;
+                    margin-top: -170px;
                     .header_nav_text_slogan{
                         grid-area: slogan;
                         stroke: 1px solid red;
@@ -145,7 +145,7 @@ body{
                         grid-area: arrow;                       
                         width: 20%;
                         height: auto;
-                        padding-left: 40%; 
+                        padding-left: 42.5%; 
                         padding-top: 10%;                  
                         color: white; 
                     }

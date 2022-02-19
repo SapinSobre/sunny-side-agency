@@ -24,40 +24,47 @@ body .main .header {
   height: 1075px;
   background-image: url("./images/mobile/image-header.jpg");
   display: grid;
-  grid-template-rows: 30% 70%;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "logosun navsun" "slogansun slogansun";
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 100%;
+  grid-template-areas: "logo" "navbar";
 }
 body .main .header .header_logo {
-  grid-area: logosun;
-  width: 200px;
+  grid-area: logo;
+  position: relative;
+  width: 40%;
+  padding: 60px 0 0 6%;
   color: white;
 }
 body .main .header .header_nav {
-  grid-area: navsun;
+  grid-area: navbar;
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "hamburgerIcon inputCheck" "navList navList";
+  grid-template-areas: "hamburgerIcon inputCheck" "navList navList" "navText navText";
 }
 body .main .header .header_nav .header_nav_hamburgerIcon {
   grid-area: hamburgerIcon;
   padding: 20px;
-  width: 100px;
-  height: 100px;
-  margin-left: 120%;
+  width: 50px;
+  height: auto;
+  margin-left: 160%;
+  margin-top: -17%;
   background-color: #3dbeff;
   color: #75daff;
 }
 body .main .header .header_nav .header_nav_check {
   grid-area: inputCheck;
-  width: 125px;
-  height: 125px;
-  margin-left: 30%;
+  width: 100px;
+  height: 100px;
+  margin-left: 55%;
+  margin-top: -13%;
   opacity: 0;
 }
 body .main .header .header_nav .header_nav_check:checked + .header_nav_list {
   display: grid;
+}
+body .main .header .header_nav .header_nav_check:checked + .header_nav_list + .header_nav_text {
+  display: none;
 }
 body .main .header .header_nav .header_nav_list {
   grid-area: navList;
@@ -69,37 +76,50 @@ body .main .header .header_nav .header_nav_list {
   background-color: white;
   opacity: 0.5;
   color: #a7abae;
+  text-transform: capitalize;
+  text-align: center;
 }
 body .main .header .header_nav .header_nav_list .header_nav_list_link {
   font-size: 2.5em;
   list-style-type: none;
-  text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a {
-  text-decoration: none;
-}
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(1) {
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(1) {
   grid-area: "about";
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(2) {
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(1) .header_nav_list_link_a {
+  text-decoration: none;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(2) {
   grid-area: "services";
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(3) {
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(2) .header_nav_list_link_a {
+  text-decoration: none;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(3) {
   grid-area: "projects";
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a:nth-child(4) {
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(3) .header_nav_list_link_a {
+  text-decoration: none;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) {
   grid-area: "contact";
 }
-body .main .header .header_text {
-  grid-area: slogansun;
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a {
+  text-decoration: none;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a .header_nav_list_link_a_p {
+  text-transform: uppercase;
+}
+body .main .header .header_nav .header_nav_text {
+  grid-area: navText;
   font-family: Fraunces, Garamond, Serif;
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 100%;
   grid-template-areas: "slogan" "arrow";
 }
-body .main .header .header_text .header_text_slogan {
+body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
   grid-area: slogan;
   stroke: 1px solid red;
   text-transform: uppercase;
@@ -107,7 +127,7 @@ body .main .header .header_text .header_text_slogan {
   color: white;
   text-align: center;
 }
-body .main .header .header_text .header_text_arrow {
+body .main .header .header_nav .header_nav_text .header_nav_text_arrow {
   grid-area: arrow;
   position: absolute;
   left: 50%;

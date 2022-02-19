@@ -24,41 +24,49 @@ body{
             height: 1075px;                     
             background-image: url('./images/mobile/image-header.jpg');                    
             display: grid;
-            grid-template-rows: 30% 70%;
-            grid-template-columns: 50% 50%;
+            grid-template-rows: 10% 90%;
+            grid-template-columns: 100%;
             grid-template-areas:                    
-            'logosun navsun'
-            'slogansun slogansun';
+            'logo' 
+            'navbar';
             .header_logo{ 
-                grid-area: logosun;   
-                width: 200px;         
+                grid-area: logo;  
+                position: relative; 
+                width: 40%; 
+                padding: 60px 0 0 6%;    
                 color: white;                                           
             }   
             .header_nav{  
-                grid-area: navsun; 
+                grid-area: navbar; 
                 display: grid;
                 grid-template-rows: 20% 80%;
                 grid-template-columns: 50% 50%;
                 grid-template-areas: 
                     'hamburgerIcon inputCheck'
-                    'navList navList';             
+                    'navList navList'
+                    'navText navText';             
                 .header_nav_hamburgerIcon{
                     grid-area: hamburgerIcon;
                     padding: 20px; 
-                    width: 100px;
-                    height: 100px;
-                    margin-left: 120%;                                   
+                    width: 50px;
+                    height: auto;
+                    margin-left: 160%; 
+                    margin-top: -17%;                                  
                     background-color: hsl(200, 100%, 62%);
                     color: hsl(196, 100%, 73%);  
                 }
                 .header_nav_check{
                     grid-area: inputCheck;
-                    width: 125px;
-                    height: 125px; 
-                    margin-left: 30%;                   
+                    width: 100px;
+                    height: 100px; 
+                    margin-left: 55%;    
+                    margin-top: -13%;               
                     opacity: 0;
                     &:checked + .header_nav_list{
                         display: grid;
+                    }
+                    &:checked + .header_nav_list + .header_nav_text{
+                        display: none;
                     }
                 }
                 .header_nav_list{
@@ -71,59 +79,77 @@ body{
                         'about'
                         'services' 
                         'projects'
-                        'contact';
-                              
+                        'contact';                           
                     background-color: white;
                     opacity: 0.5;
                     color: hsl(210, 4%, 67%);  
+                    text-transform: capitalize;
+                    text-align: center;
                     .header_nav_list_link{
                         font-size: 2.5em;
                         list-style-type: none;
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        .header_nav_list_link_a{
-                            text-decoration: none;
-                            &:nth-child(1){
-                                grid-area: 'about';
-                            }
-                            &:nth-child(2){
-                                grid-area: 'services';
-                            }
-                            &:nth-child(3){
-                                grid-area: 'projects';
-                            }
-                            &:nth-child(4){
-                                grid-area: 'contact';
+                        
+                        text-transform: capitalize; 
+                        &:nth-child(1){
+                            grid-area: 'about'; 
+                            .header_nav_list_link_a{
+                                text-decoration: none;                                
+                                .header_nav_list_link_a_p{                                    
+                                }                         
+                            }                           
+                        }
+                        &:nth-child(2){
+                            grid-area: 'services';                            
+                            .header_nav_list_link_a{
+                                text-decoration: none;
+                                .header_nav_list_link_a_p{                                    
+                                }                         
                             }
                         }
+                        &:nth-child(3){
+                            grid-area: 'projects';                         
+                            .header_nav_list_link_a{
+                                text-decoration: none;
+                                .header_nav_list_link_a_p{                                    
+                                }                         
+                            }
+                        }
+                        &:nth-child(4){
+                            grid-area: 'contact';
+                            .header_nav_list_link_a{
+                                text-decoration: none;
+                                .header_nav_list_link_a_p{    
+                                    text-transform: uppercase;                                
+                                }                         
+                            }
+                        }                        
                     }
                 }
-            }             
-            .header_text{
-                grid-area: slogansun;
-                font-family: Fraunces, Garamond, Serif;
-                display: grid; 
-                grid-template-rows: 20% 80%;
-                grid-template-columns: 100%;                      
-                grid-template-areas: 
+                .header_nav_text{
+                    grid-area: navText;
+                    font-family: Fraunces, Garamond, Serif;
+                    display: grid; 
+                    grid-template-rows: 20% 80%;
+                    grid-template-columns: 100%;                      
+                    grid-template-areas: 
                     'slogan'
                     'arrow';
-                .header_text_slogan{
-                    grid-area: slogan;
-                    stroke: 1px solid red;
-                    text-transform: uppercase;
-                    font-size: 4em;
-                    color: white;  
-                    text-align: center;                      
-                }
-                .header_text_arrow{   
-                    grid-area: arrow;      
-                    position: absolute;
-                    left: 50%;                   
-                    color: white; 
-                                            
-                }            
-            }            
+                    .header_nav_text_slogan{
+                        grid-area: slogan;
+                        stroke: 1px solid red;
+                        text-transform: uppercase;
+                        font-size: 4em;
+                        color: white;  
+                        text-align: center;  
+                    }
+                    .header_nav_text_arrow{
+                        grid-area: arrow;      
+                        position: absolute;
+                        left: 50%;                   
+                        color: white; 
+                    }
+                }                
+            }                    
         }
         .article{
             grid-area: articlesun;

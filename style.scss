@@ -1,4 +1,5 @@
 @import '_variables.scss';
+@import '_desktop.scss';
 
 body{
     margin:0;
@@ -28,10 +29,10 @@ body{
             grid-template-rows: 30% 70%;
             grid-template-columns: 100%;
             grid-template-areas:                    
-            'logo' 
+            'logobar' 
             'navbar';
             .header_logo{ 
-                grid-area: logo;  
+                grid-area: logobar;  
                 position: relative; 
                 width: 30%; 
                 padding: 60px 0 0 5%;    
@@ -76,8 +77,7 @@ body{
                     align-items:center;                             
                     margin: -80px 6% 33% 10%;                                       
                     background-color: #fffbfb;
-                    opacity: 1;
-                    color: $very_dark_grayish_blue;  
+                    opacity: 1;                     
                     text-transform: capitalize;
                     text-align: center;
                     position: absolute;
@@ -90,8 +90,9 @@ body{
                         list-style-type: none;                        
                         text-transform: capitalize;
                         .header_nav_list_link_a{
+                                color: red;  
                             .header_nav_list_link_a_p{
-                                color: $very_dark_grayish_blue;  
+                                
                             }
                         }                                              
                         &:nth-child(1){
@@ -117,12 +118,15 @@ body{
                         }
                         &:nth-child(4){                     
                             .header_nav_list_link_a{                                
-                                text-decoration: none;                                
-                                .header_nav_list_link_a_p{    
-                                    text-transform: uppercase;   
+                                text-decoration: none; 
+                                &:hover > .header_nav_list_link_a_p{
                                     padding: 25px 30px 25px 30px;
                                     background-color: $yellow;
-                                    border-radius: 50%;                             
+                                    border-radius: 50%;  
+
+                                }                              
+                                .header_nav_list_link_a_p{    
+                                    text-transform: uppercase;                                     
                                 }                         
                             }
                         }                        
@@ -140,7 +144,6 @@ body{
                         'arrow';                    
                     .header_nav_text_slogan{
                         grid-area: slogan;
-                        stroke: 1px solid red;
                         text-transform: uppercase;
                         font-size: 5.5em;
                         color: white;  
@@ -331,3 +334,79 @@ body{
         } 
     }
 }
+@media only screen and (min-width:376px) and (max-width:1600px){
+    body{
+        width: 1440px;
+        height: auto;       
+        .main{
+            width: 100%;
+            height: auto;
+            .header{                
+                width: 100%;
+                
+                background-image: url('./images/desktop/image-header.jpg');
+                background-size: 100%  auto;
+                height: 800px;
+                grid-template-rows: 100%;
+                grid-template-columns: 30% 70%;
+                grid-template-areas: 
+                    'logobar navbar';              
+                .header_logo{
+                    width: 65%;
+                    margin-left: 8%;
+                }
+                .header_nav{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .header_nav_hamburgerIcon{
+                        display: none;
+                    }
+                    .header_nav_check{ 
+                        display: none;                       
+                    }
+                    .header_nav_list{
+                        width: 60%;                        
+                        background-color: transparent; 
+                        display: flex;
+                        flex-direction: row; 
+                        justify-content: space-between;
+                        margin-top: -500px;
+                        margin-left: 2%;
+
+                        .header_nav_list_link {                                 
+                            .header_nav_list_link_a{                                
+                                .header_nav_list_link_a_p{
+                                    color: white;          
+                                }
+                            }
+                        }
+                    }
+                    .header_nav_text{                        
+                        margin-left: -45%;
+                       
+                        .header_nav_text_slogan{
+                            margin-left: 5%;
+                        }
+                        .header_nav_text_arrow{
+                            width: 2%;
+                            margin-left: 3.5%;
+                        }
+                    }
+                }
+            }
+            .article{
+
+            }
+            .aside{
+
+            }
+            .asideTestimonials{
+
+            }
+            .footer{
+
+            }
+        }
+    }
+}
+

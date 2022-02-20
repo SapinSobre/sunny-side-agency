@@ -1,11 +1,89 @@
 @import '_variables.scss';
-@import '_desktop.scss';
+
+/*-------------------BARLOW---------------------------------------*/
+
+@font-face{
+    font-family: 'Barlow_Black';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-Black.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_BlackItalic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-BlackItalic.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_Bold';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-Bold.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_BoldItalic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-BoldItalic.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_ExtraBold';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-ExtraBold.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_ExtraBoldItalic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-ExtraBoldItalic.ttf') format("truetype");
+}
+@font-face{
+    font-family: 'Barlow_ExtraLight';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-ExtraLight.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_ExtraLightItalic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-ExtraLightItalic.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_Italic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-Italic.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_Light';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-Light.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_LightItalic';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-LightItalic.ttf') format("truetype");
+};
+@font-face{
+    font-family: 'Barlow_Medium';
+    src: url('barlow.eot');
+    src: url('./barlow/Barlow-Medium.ttf') format("truetype");
+}
+
+/*--------------FRAUNCES-----------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Fraunces_Italic';
+    src: url('fraunces.eot');
+    src: url('./fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'Fraunces_Regular';
+    src: url('fraunces.eot');
+    src: url('./fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+
+
+
 
 body{
     margin:0;
     padding:0;   
     font-size: 18px;
-    font-family: Barlow, Arial, Sans-Serif; 
+    font-family: Barlow_Medium, Arial, Sans-Serif; 
     width: 375px;
     .main{     
         margin: 0;
@@ -91,6 +169,7 @@ body{
                         text-transform: capitalize;
                         .header_nav_list_link_a{
                                 color: red;  
+                                
                             .header_nav_list_link_a_p{
                                 
                             }
@@ -123,7 +202,6 @@ body{
                                     padding: 25px 30px 25px 30px;
                                     background-color: $yellow;
                                     border-radius: 50%;  
-
                                 }                              
                                 .header_nav_list_link_a_p{    
                                     text-transform: uppercase;                                     
@@ -134,7 +212,6 @@ body{
                 }
                 .header_nav_text{
                     grid-area: navList;
-                    font-family: Fraunces, Garamond, Serif;  
                     margin-top: -250px;                  
                     display: grid; 
                     grid-template-rows: 30% 70%;
@@ -145,7 +222,11 @@ body{
                     .header_nav_text_slogan{
                         grid-area: slogan;
                         text-transform: uppercase;
-                        font-size: 5.5em;
+                        transform:scaleY(0.8);
+                        letter-spacing: 20px; 
+                        line-height: 1.5;
+                        font-weight: bold;
+                        font-size: 4em;
                         color: white;  
                         text-align: center;  
                     }
@@ -164,7 +245,6 @@ body{
             grid-area: articlesun;
             text-align: center;            
             color: hsl(219, 28%, 18%);            
-            font-family: Fraunces, Garmond, Serif; 
             .article_section{
                 .article_section_image{                        
                 } 
@@ -179,14 +259,14 @@ body{
                     flex-direction: column;
                     justify-content:space-around;
                     align-items:center;                                
-                    .article_section_content_title{                                      
+                    .article_section_content_title{  
+                        font-family: Fraunces_Regular, Garamond, serif;                                    
                         font-size: 4em;
                         font-weight: bold;                                 
                     }   
                     .article_section_content_text{                                                
                         color:hsl(249, 8%, 54%);
                         font-size: 2em;
-                        margin-top: -30px;
                     } 
                     .article_section_content_link{                                                     
                         font-weight: bold;
@@ -207,7 +287,6 @@ body{
         .aside{
             grid-area: asidesun;
             text-align: center;              
-            font-family : Fraunces, Garamond, Serif;  
             color: $dark_blue;                   
             .aside_section{ 
                 height: 1200px;
@@ -223,12 +302,13 @@ body{
                 .aside_section_title{ 
                     padding-top: 115%; 
                     font-size: 4em; 
-                    font-weight: bold;                           
+                    font-weight: bold;  
+                    font-family: Fraunces_Regular, 'Garamond', serif;                     
                 }
                 .aside_section_text{ 
-                    font-size: 1.8em;  
-                    margin-bottom: 30%; 
-                    font-weight: bold;                       
+                    font-size: 1.8em;                      
+                    font-family: Barlow_Black, Arial, sans-serif; 
+                    font-weight: bold;                   
                 }                
             }
         }
@@ -348,7 +428,7 @@ body{
 @media only screen and (min-width:376px) and (max-width:1600px){
     body{
         width: 1440px;
-        height: auto;       
+        height: auto;    
         .main{
             width: 100%;
             height: auto;
@@ -418,33 +498,44 @@ body{
                     .article_section_desktopImage{
                         display: inline-block;
                     }
-                    .article_section_content{
-                        
+                    .article_section_content{   
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;                  
                         .article_section_content_title{
                             font-size: 2em;
-                            font-weight: bold;
-                            padding: 0;
+                            position :relative;
                             margin: 0;
-                            text-align: left;
+                            padding: 0;
+                            top: -50px;
+                            text-align:left;                           
+                        }
+                        #articleTitle1{
+                            position: relative;
+                            left: -38px;
                         }
                         .article_section_content_text{
-                            padding: 0;
                             font-size: 1.3em;
                             margin: 0;
-                            text-align: left;
+                            padding: 0; 
+                            text-align: left; 
+                            position: relative;
+                            top: 0px;                             
                         }
                         .article_section_content_link{
-                            margin: 0;
-                            padding:0;
                             font-size: 1.3em;
-                            text-align: left;
-                        }
+                            margin: 0;
+                            padding: 0;   
+                            position :relative;
+                            left: -34%;
+                            bottom: -50px; 
+                           }
                     }
                     &:last-child{
                         flex-direction: row-reverse;
                     }
                 }
-
             }
             .aside{
                 display: flex;
@@ -485,9 +576,12 @@ body{
                     'testimonialTitle testimonialTitle testimonialTitle'
                     'testimonialSection1 testimonialSection2 testimonialSection3';
                 .asideTestimonials_title{
+                    font-family: Fraunces_Regular, Garamond, serif;
                     grid-area: testimonialTitle;
+                    color: $very_dark_grayish_blue;
                 }
                 .asideTestimonials_section{
+                    color: $very_dark_grayish_blue;
                     &:first-child{
                         grid-area: testimonialSection1;
                     }
@@ -504,10 +598,10 @@ body{
 
                     }
                     .asideTestimonials_section_name{
-
+                        font-family: Fraunces_Regular, Garamond, serif;
                     }
                     .asideTestimonials_section_function{
-
+                        
                     }
                 }
             }

@@ -160,7 +160,10 @@ body .main .article {
   color: #212a3b;
   font-family: Fraunces, Garmond, Serif;
 }
-body .main .article .article_section_content {
+body .main .article .article_section .article_section_desktopImage {
+  display: none;
+}
+body .main .article .article_section .article_section_content {
   padding-left: 10%;
   padding-right: 10%;
   background-color: #fdfcf7;
@@ -169,16 +172,16 @@ body .main .article .article_section_content {
   justify-content: space-around;
   align-items: center;
 }
-body .main .article .article_section_content .article_section_content_title {
+body .main .article .article_section .article_section_content .article_section_content_title {
   font-size: 4em;
   font-weight: bold;
 }
-body .main .article .article_section_content .article_section_content_text {
+body .main .article .article_section .article_section_content .article_section_content_text {
   color: #838093;
   font-size: 2em;
   margin-top: -30px;
 }
-body .main .article .article_section_content .article_section_content_link {
+body .main .article .article_section .article_section_content .article_section_content_link {
   font-weight: bold;
   font-size: 2em;
   text-transform: uppercase;
@@ -345,13 +348,13 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
     flex-direction: row;
     justify-content: space-between;
     margin-top: -500px;
-    margin-left: 2%;
+    margin-left: 0%;
   }
   body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a .header_nav_list_link_a_p {
     color: white;
   }
   body .main .header .header_nav .header_nav_text {
-    margin-left: -45%;
+    margin-left: -50%;
   }
   body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
     margin-left: 5%;
@@ -359,6 +362,49 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
   body .main .header .header_nav .header_nav_text .header_nav_text_arrow {
     width: 2%;
     margin-left: 3.5%;
+  }
+  body .main .article .article_section {
+    display: flex;
+    flex-direction: row;
+  }
+  body .main .article .article_section .article_section_image {
+    display: none;
+  }
+  body .main .article .article_section .article_section_desktopImage {
+    display: inline-block;
+  }
+  body .main .article .article_section:last-child {
+    flex-direction: row-reverse;
+  }
+  body .main .aside {
+    display: flex;
+    flex-direction: row;
+    height: 540px;
+    margin: 0;
+    padding: 0;
+  }
+  body .main .aside .aside_section {
+    margin: 0;
+    padding: 350px 10% 50px 10%;
+  }
+  body .main .aside .aside_section:first-child {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+    width: 100%;
+  }
+  body .main .aside .aside_section:last-child {
+    background-image: url("./images/desktop/image-photography.jpg");
+    width: 100%;
+  }
+  body .main .aside .aside_section .aside_section_title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 1.7em;
+  }
+  body .main .aside .aside_section .aside_section_text {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
   }
 }
 

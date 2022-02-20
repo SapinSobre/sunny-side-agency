@@ -3,6 +3,25 @@
 /*photography text*/
 /*footer*/
 /*--------------------Neutral----------------------------*/
+@media only screen and (min-width: 376px) and (max-width: 1600px) {
+  body {
+    width: 1440px;
+    height: auto;
+  }
+  body .main {
+    width: 100%;
+    height: auto;
+  }
+  body .main .header {
+    height: auto;
+  }
+  body .main .header .header_nav .header_nav_hamburgerIcon {
+    background-color: red;
+  }
+  body .main .header .header_nav .header_nav_list {
+    width: 50%;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -27,10 +46,10 @@ body .main .header {
   display: grid;
   grid-template-rows: 30% 70%;
   grid-template-columns: 100%;
-  grid-template-areas: "logo" "navbar";
+  grid-template-areas: "logobar" "navbar";
 }
 body .main .header .header_logo {
-  grid-area: logo;
+  grid-area: logobar;
   position: relative;
   width: 30%;
   padding: 60px 0 0 5%;
@@ -75,7 +94,6 @@ body .main .header .header_nav .header_nav_list {
   margin: -80px 6% 33% 10%;
   background-color: #fffbfb;
   opacity: 1;
-  color: #5a636c;
   text-transform: capitalize;
   text-align: center;
   position: absolute;
@@ -89,8 +107,8 @@ body .main .header .header_nav .header_nav_list .header_nav_list_link {
   list-style-type: none;
   text-transform: capitalize;
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a .header_nav_list_link_a_p {
-  color: #5a636c;
+body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a {
+  color: red;
 }
 body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(1) .header_nav_list_link_a {
   text-decoration: none;
@@ -104,11 +122,13 @@ body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(
 body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a {
   text-decoration: none;
 }
-body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a .header_nav_list_link_a_p {
-  text-transform: uppercase;
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a:hover > .header_nav_list_link_a_p {
   padding: 25px 30px 25px 30px;
   background-color: #fad400;
   border-radius: 50%;
+}
+body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(4) .header_nav_list_link_a .header_nav_list_link_a_p {
+  text-transform: uppercase;
 }
 body .main .header .header_nav .header_nav_text {
   grid-area: navList;
@@ -121,7 +141,6 @@ body .main .header .header_nav .header_nav_text {
 }
 body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
   grid-area: slogan;
-  stroke: 1px solid red;
   text-transform: uppercase;
   font-size: 5.5em;
   color: white;
@@ -286,6 +305,61 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
   grid-area: copyrightIconmenu;
   padding-bottom: 200px;
   margin-top: -50px;
+}
+@media only screen and (min-width: 376px) and (max-width: 1600px) {
+  body {
+    width: 1440px;
+    height: auto;
+  }
+  body .main {
+    width: 100%;
+    height: auto;
+  }
+  body .main .header {
+    width: 100%;
+    background-image: url("./images/desktop/image-header.jpg");
+    background-size: 100% auto;
+    height: 800px;
+    grid-template-rows: 100%;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "logobar navbar";
+  }
+  body .main .header .header_logo {
+    width: 65%;
+    margin-left: 8%;
+  }
+  body .main .header .header_nav {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  body .main .header .header_nav .header_nav_hamburgerIcon {
+    display: none;
+  }
+  body .main .header .header_nav .header_nav_check {
+    display: none;
+  }
+  body .main .header .header_nav .header_nav_list {
+    width: 60%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -500px;
+    margin-left: 2%;
+  }
+  body .main .header .header_nav .header_nav_list .header_nav_list_link .header_nav_list_link_a .header_nav_list_link_a_p {
+    color: white;
+  }
+  body .main .header .header_nav .header_nav_text {
+    margin-left: -45%;
+  }
+  body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
+    margin-left: 5%;
+  }
+  body .main .header .header_nav .header_nav_text .header_nav_text_arrow {
+    width: 2%;
+    margin-left: 3.5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

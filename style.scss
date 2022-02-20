@@ -323,9 +323,12 @@ body{
                 font-size: 2.4em;
                 text-transform: uppercase;
                 padding-top: 30px;
+                font-family: Fraunces_Regular, Garamond, serif;
+                color: $very_dark_grayish_blue;
             }
             .asideTestimonials_section{
                 padding: 20px;
+                color: $very_dark_grayish_blue;
                 &:last-child{
                     padding-bottom: 100px;
                 }
@@ -338,7 +341,8 @@ body{
                 .asideTestimonials_section_name{
                     font-weight: bold;
                     text-transform: capitalize;
-                    font-size: 1.4em;  
+                    font-size: 1.4em;
+                    font-family: Fraunces_Regular, Garamond, serif;  
                 }
                 .asideTestimonials_section_function{
                     text-transform: capitalize; 
@@ -546,7 +550,6 @@ body{
                 .aside_section{
                     margin:0;
                     padding: 350px 10% 50px 10%;
-                    
                     &:first-child{
                         background-image: url('./images/desktop/image-graphic-design.jpg');
                         width: 100%;
@@ -576,12 +579,9 @@ body{
                     'testimonialTitle testimonialTitle testimonialTitle'
                     'testimonialSection1 testimonialSection2 testimonialSection3';
                 .asideTestimonials_title{
-                    font-family: Fraunces_Regular, Garamond, serif;
                     grid-area: testimonialTitle;
-                    color: $very_dark_grayish_blue;
                 }
                 .asideTestimonials_section{
-                    color: $very_dark_grayish_blue;
                     &:first-child{
                         grid-area: testimonialSection1;
                     }
@@ -598,7 +598,7 @@ body{
 
                     }
                     .asideTestimonials_section_name{
-                        font-family: Fraunces_Regular, Garamond, serif;
+                        
                     }
                     .asideTestimonials_section_function{
                         

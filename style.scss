@@ -276,17 +276,23 @@ body{
                 grid-template-areas: 
                     'milk oranges'
                     'cone sugar';                            
-                #milk{
+                &:first-child{
                     grid-area: milk;                                                  
                 }
-                #oranges{
+                &:nth-child(2){
                     grid-area: oranges;                                    
                 }
-                #cone{
+                &:nth-child(3){
                     grid-area: cone;                                          
                 }
-                #sugar{
+                &:last-child{
                     grid-area: sugar;                                         
+                }
+            }
+            .footer_imagesDesktop{
+                display: none;
+                .footer_imagesDesktop_img{
+                   
                 }
             } 
             .footer_copyright{            
@@ -384,12 +390,18 @@ body{
                             }
                         }
                     }
-                    .header_nav_text{                        
-                        margin-left: -50%;                       
-                        .header_nav_text_slogan{
+                    .header_nav_text{  
+                            
+                        position: relative;
+                        top: -400px;
+                        left: -250px;          
+                        .header_nav_text_slogan{                               
+                            font-size: 3em;
                             margin-left: 5%;
+                            margin-bottom: -70px;
                         }
                         .header_nav_text_arrow{
+                            padding-top: -300px;     
                             width: 2%;
                             margin-left: 3.5%;
                         }
@@ -409,13 +421,23 @@ body{
                     .article_section_content{
                         
                         .article_section_content_title{
-
+                            font-size: 2em;
+                            font-weight: bold;
+                            padding: 0;
+                            margin: 0;
+                            text-align: left;
                         }
                         .article_section_content_text{
-
+                            padding: 0;
+                            font-size: 1.3em;
+                            margin: 0;
+                            text-align: left;
                         }
                         .article_section_content_link{
-
+                            margin: 0;
+                            padding:0;
+                            font-size: 1.3em;
+                            text-align: left;
                         }
                     }
                     &:last-child{
@@ -433,6 +455,7 @@ body{
                 .aside_section{
                     margin:0;
                     padding: 350px 10% 50px 10%;
+                    
                     &:first-child{
                         background-image: url('./images/desktop/image-graphic-design.jpg');
                         width: 100%;
@@ -455,10 +478,69 @@ body{
                 }
             }
             .asideTestimonials{
+                display: grid;
+                grid-template-rows: 20% 80%;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                    'testimonialTitle testimonialTitle testimonialTitle'
+                    'testimonialSection1 testimonialSection2 testimonialSection3';
+                .asideTestimonials_title{
+                    grid-area: testimonialTitle;
+                }
+                .asideTestimonials_section{
+                    &:first-child{
+                        grid-area: testimonialSection1;
+                    }
+                    &:nth-child(2){
+                        grid-area: testimonialSection2;
+                    }
+                    &:last-child{
+                        grid-area: testimonialSection3;
+                    }
+                    .asideTestimonials_section_image{
 
+                    }
+                    .asideTestimonials_section_text{
+
+                    }
+                    .asideTestimonials_section_name{
+
+                    }
+                    .asideTestimonials_section_function{
+
+                    }
+                }
             }
             .footer{
-
+                width: 1440px;
+                
+                .footer_images{
+                    display: none;                    
+                    .footer_images_img{
+                       
+                    }
+                }
+                .footer_imagesDesktop{ 
+                   display: flex;
+                   width: 1440px;
+                   flex-direction: row;                   
+                    .footer_imagesDesktop_img{   
+                        width: 25%;
+                        height: auto;                    
+                        &:first-child{
+                            
+                        }
+                        &:nth-child(2){
+                           
+                        }
+                        &:nth-child(3){
+                           
+                        }
+                        &:nth-child(4){
+                            
+                        }
+                    }
+                }
             }
         }
     }

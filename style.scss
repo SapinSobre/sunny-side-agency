@@ -283,19 +283,39 @@ body{
             } 
             .footer_copyright{            
                 text-align: center;
-                height: 400px; 
+                height: 500px; 
                 background-color: hsl(167, 44%, 70%); 
                 padding-top: 100px;
-                .footer_copyright_logo{                    
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                    'copyrightLogo'
+                    'copyrightMenu'
+                    'copyrightIconmenu';
+                .footer_copyright_logo{ 
+                    grid-area: copyrightLogo; 
+                    margin-left: 36%;                  
                     color: $dark_desaturated_cyan;
+                    width: 30%;
+                    height: auto;
                 }
-                .footer_copyright_menu{              
+                .footer_copyright_menu{   
+                    grid-area: copyrightMenu; 
+                    margin-top: -50px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;          
                     .footer_copyright_menu_link{
                         color: $dark_desaturated_cyan;
-                        text-decoration: none;                        
+                        text-decoration: none; 
+                        text-transform: capitalize;                       
                     }
                 }
-                .footer_copyright_iconmenu{                    
+                .footer_copyright_iconmenu{  
+                    grid-area: copyrightIconmenu;
+                    padding-bottom: 200px; 
+                    margin-top: -50px;                                
                     .footer_copyright_inconmenu_icon{
                         &:nth-child(1){                           
                         }

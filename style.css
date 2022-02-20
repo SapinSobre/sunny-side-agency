@@ -3,30 +3,83 @@
 /*photography text*/
 /*footer*/
 /*--------------------Neutral----------------------------*/
-@media only screen and (min-width: 376px) and (max-width: 1600px) {
-  body {
-    width: 1440px;
-    height: auto;
-  }
-  body .main {
-    width: 100%;
-    height: auto;
-  }
-  body .main .header {
-    height: auto;
-  }
-  body .main .header .header_nav .header_nav_hamburgerIcon {
-    background-color: red;
-  }
-  body .main .header .header_nav .header_nav_list {
-    width: 50%;
-  }
+/*-------------------BARLOW---------------------------------------*/
+@font-face {
+  font-family: "Barlow_Black";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_BlackItalic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_Bold";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_BoldItalic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_ExtraBold";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_ExtraBoldItalic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_ExtraLight";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_ExtraLightItalic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-ExtraLightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_Italic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_Light";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_LightItalic";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow_Medium";
+  src: url("barlow.eot");
+  src: url("./barlow/Barlow-Medium.ttf") format("truetype");
+}
+/*--------------FRAUNCES-----------------------------------------------------------------------------*/
+@font-face {
+  font-family: "Fraunces_Italic";
+  src: url("fraunces.eot");
+  src: url("./fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fraunces_Regular";
+  src: url("fraunces.eot");
+  src: url("./fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
 }
 body {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  font-family: Barlow, Arial, Sans-Serif;
+  font-family: Barlow_Medium, Arial, Sans-Serif;
   width: 375px;
 }
 body .main {
@@ -132,7 +185,6 @@ body .main .header .header_nav .header_nav_list .header_nav_list_link:nth-child(
 }
 body .main .header .header_nav .header_nav_text {
   grid-area: navList;
-  font-family: Fraunces, Garamond, Serif;
   margin-top: -250px;
   display: grid;
   grid-template-rows: 30% 70%;
@@ -142,7 +194,11 @@ body .main .header .header_nav .header_nav_text {
 body .main .header .header_nav .header_nav_text .header_nav_text_slogan {
   grid-area: slogan;
   text-transform: uppercase;
-  font-size: 5.5em;
+  transform: scaleY(0.8);
+  letter-spacing: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 4em;
   color: white;
   text-align: center;
 }
@@ -158,7 +214,6 @@ body .main .article {
   grid-area: articlesun;
   text-align: center;
   color: #212a3b;
-  font-family: Fraunces, Garmond, Serif;
 }
 body .main .article .article_section .article_section_desktopImage {
   display: none;
@@ -173,13 +228,13 @@ body .main .article .article_section .article_section_content {
   align-items: center;
 }
 body .main .article .article_section .article_section_content .article_section_content_title {
+  font-family: Fraunces_Regular, Garamond, serif;
   font-size: 4em;
   font-weight: bold;
 }
 body .main .article .article_section .article_section_content .article_section_content_text {
   color: #838093;
   font-size: 2em;
-  margin-top: -30px;
 }
 body .main .article .article_section .article_section_content .article_section_content_link {
   font-weight: bold;
@@ -197,7 +252,6 @@ body .main .article .article_section .article_section_content .article_section_c
 body .main .aside {
   grid-area: asidesun;
   text-align: center;
-  font-family: Fraunces, Garamond, Serif;
   color: #19536b;
 }
 body .main .aside .aside_section {
@@ -216,10 +270,11 @@ body .main .aside .aside_section .aside_section_title {
   padding-top: 115%;
   font-size: 4em;
   font-weight: bold;
+  font-family: Fraunces_Regular, "Garamond", serif;
 }
 body .main .aside .aside_section .aside_section_text {
   font-size: 1.8em;
-  margin-bottom: 30%;
+  font-family: Barlow_Black, Arial, sans-serif;
   font-weight: bold;
 }
 body .main .asideTestimonials {
@@ -381,24 +436,39 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
   body .main .article .article_section .article_section_desktopImage {
     display: inline-block;
   }
+  body .main .article .article_section .article_section_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   body .main .article .article_section .article_section_content .article_section_content_title {
     font-size: 2em;
-    font-weight: bold;
-    padding: 0;
+    position: relative;
     margin: 0;
+    padding: 0;
+    top: -50px;
     text-align: left;
+  }
+  body .main .article .article_section .article_section_content #articleTitle1 {
+    position: relative;
+    left: -38px;
   }
   body .main .article .article_section .article_section_content .article_section_content_text {
-    padding: 0;
     font-size: 1.3em;
     margin: 0;
+    padding: 0;
     text-align: left;
+    position: relative;
+    top: 0px;
   }
   body .main .article .article_section .article_section_content .article_section_content_link {
+    font-size: 1.3em;
     margin: 0;
     padding: 0;
-    font-size: 1.3em;
-    text-align: left;
+    position: relative;
+    left: -34%;
+    bottom: -50px;
   }
   body .main .article .article_section:last-child {
     flex-direction: row-reverse;
@@ -440,7 +510,12 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
     grid-template-areas: "testimonialTitle testimonialTitle testimonialTitle" "testimonialSection1 testimonialSection2 testimonialSection3";
   }
   body .main .asideTestimonials .asideTestimonials_title {
+    font-family: Fraunces_Regular, Garamond, serif;
     grid-area: testimonialTitle;
+    color: #5a636c;
+  }
+  body .main .asideTestimonials .asideTestimonials_section {
+    color: #5a636c;
   }
   body .main .asideTestimonials .asideTestimonials_section:first-child {
     grid-area: testimonialSection1;
@@ -450,6 +525,9 @@ body .main .footer .footer_copyright .footer_copyright_iconmenu {
   }
   body .main .asideTestimonials .asideTestimonials_section:last-child {
     grid-area: testimonialSection3;
+  }
+  body .main .asideTestimonials .asideTestimonials_section .asideTestimonials_section_name {
+    font-family: Fraunces_Regular, Garamond, serif;
   }
   body .main .footer {
     width: 1440px;

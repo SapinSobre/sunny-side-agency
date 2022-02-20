@@ -255,16 +255,37 @@ body .main .footer .footer_images #sugar {
 }
 body .main .footer .footer_copyright {
   text-align: center;
-  height: 400px;
+  height: 500px;
   background-color: #91d4c6;
   padding-top: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "copyrightLogo" "copyrightMenu" "copyrightIconmenu";
 }
 body .main .footer .footer_copyright .footer_copyright_logo {
+  grid-area: copyrightLogo;
+  margin-left: 36%;
   color: #25564b;
+  width: 30%;
+  height: auto;
+}
+body .main .footer .footer_copyright .footer_copyright_menu {
+  grid-area: copyrightMenu;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 body .main .footer .footer_copyright .footer_copyright_menu .footer_copyright_menu_link {
   color: #25564b;
   text-decoration: none;
+  text-transform: capitalize;
+}
+body .main .footer .footer_copyright .footer_copyright_iconmenu {
+  grid-area: copyrightIconmenu;
+  padding-bottom: 200px;
+  margin-top: -50px;
 }
 
 /*# sourceMappingURL=style.css.map */
